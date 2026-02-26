@@ -7,7 +7,7 @@ from Crypto.Cipher import PKCS1_OAEP
 app = Flask(__name__)
 
 # Generate RSA keys on startup for demo use.
-_key = RSA.generate(64)
+_key = RSA.generate(2048)
 public_key = _key.publickey()
 private_key = _key
 
@@ -109,3 +109,4 @@ def decrypt():
 if __name__ == "__main__":
 
     app.run(debug=True)
+
